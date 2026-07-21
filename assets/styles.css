@@ -228,11 +228,11 @@ p { margin: 0; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 76px;
+  height: 104px;
 }
 
 .brand img {
-  height: 34px;
+  height: 85px;
   width: auto;
 }
 
@@ -285,7 +285,7 @@ p { margin: 0; }
 @media (max-width: 880px) {
   .nav-links {
     position: fixed;
-    top: 76px; left: 0; right: 0;
+    top: 104px; left: 0; right: 0;
     background: var(--surface-1);
     border-bottom: 1px solid var(--border);
     flex-direction: column;
@@ -575,7 +575,7 @@ h3 { font-size: 1.4rem; }
   padding-bottom: 40px;
 }
 @media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
-.footer-brand img { height: 28px; margin-bottom: 16px; }
+.footer-brand img { height: 70px; margin-bottom: 18px; }
 .footer-brand p { color: var(--text-3); font-size: 0.88rem; max-width: 260px; }
 .footer-col h4 { font-size: 0.85rem; color: var(--text-2); letter-spacing: 0.04em; margin-bottom: 16px; }
 .footer-col a, .footer-col li { color: var(--text-3); font-size: 0.9rem; }
@@ -779,7 +779,7 @@ select {
   padding: 40px;
   text-align: center;
 }
-.admin-login-card img { height: 30px; margin: 0 auto 24px; }
+.admin-login-card img { height: 75px; margin: 0 auto 24px; }
 .admin-login-card h1 { font-size: 1.3rem; margin-bottom: 8px; }
 .admin-login-card p.lead { font-size: 0.9rem; margin-top: 0; margin-bottom: 26px; }
 .admin-login-card .form-field { text-align: left; margin-bottom: 18px; }
@@ -792,9 +792,9 @@ select {
 }
 .admin-topbar .container {
   display: flex; align-items: center; justify-content: space-between;
-  height: 72px;
+  height: 96px;
 }
-.admin-topbar img { height: 28px; }
+.admin-topbar img { height: 70px; }
 .admin-topbar .admin-title { font-family: var(--font-display); font-size: 1rem; color: var(--text-2); }
 
 .admin-main { padding: 40px 0 80px; }
