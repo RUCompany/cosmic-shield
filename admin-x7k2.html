@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>관리자 — COSMIC SHIELD</title>
+<link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+
+<div class="starfield"></div>
+
+<!-- LOGIN VIEW -->
+<div id="login-view" class="admin-login-shell">
+  <div class="admin-login-card">
+    <img src="./brand_logo/logo-white.png" alt="COSMIC SHIELD">
+    <h1>관리자 로그인</h1>
+    <p class="lead">견적문의 내역을 확인하려면 비밀번호를 입력하세요.</p>
+
+    <div id="login-error" class="form-error-banner"></div>
+
+    <form id="login-form">
+      <div class="form-field">
+        <label for="admin-password">비밀번호</label>
+        <input type="password" id="admin-password" name="password" placeholder="••••••••" required autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">로그인</button>
+    </form>
+  </div>
+</div>
+
+<!-- DASHBOARD VIEW -->
+<div id="dashboard-view" style="display:none;">
+  <header class="admin-topbar">
+    <div class="container">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <img src="./brand_logo/logo-white.png" alt="COSMIC SHIELD">
+        <span class="admin-title">견적문의 관리</span>
+      </div>
+      <button id="logout-btn" class="btn btn-ghost btn-sm">로그아웃</button>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <div class="container">
+
+      <div class="admin-stats">
+        <div class="admin-stat-card">
+          <div class="stat-num" id="stat-total">0</div>
+          <div class="stat-label">전체 견적문의</div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="stat-num" id="stat-pending">0</div>
+          <div class="stat-label">대기중</div>
+        </div>
+        <div class="admin-stat-card">
+          <div class="stat-num" id="stat-today">0</div>
+          <div class="stat-label">오늘 접수</div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>이름</th>
+              <th>연락처</th>
+              <th>이메일</th>
+              <th>차종</th>
+              <th>관심 필름</th>
+              <th>문의사항</th>
+              <th>접수일</th>
+              <th>상태</th>
+            </tr>
+          </thead>
+          <tbody id="quote-table-body">
+            <!-- JS로 렌더링 -->
+          </tbody>
+        </table>
+      </div>
+
+      <div id="admin-empty" class="admin-empty" style="display:none;">아직 접수된 견적문의가 없습니다.</div>
+    </div>
+  </main>
+</div>
+
+<script src="./assets/admin.js"></script>
+</body>
+</html>
