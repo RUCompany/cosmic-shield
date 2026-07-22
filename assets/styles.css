@@ -853,6 +853,161 @@ select {
   color: var(--text-3);
 }
 
+/* ==========================================================================
+   Price sheet (Claude Design import)
+   ========================================================================== */
+
+.price-sheet {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse 900px 500px at 50% 0%, oklch(22% 0.04 275) 0%, #06060d 55%);
+  border-radius: 28px;
+  padding: 64px 0 60px;
+}
+
+.price-sheet-nebula {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: screen;
+  background-image:
+    radial-gradient(600px 380px at 78% 12%, oklch(45% 0.13 300 / 0.35), transparent 70%),
+    radial-gradient(520px 340px at 15% 25%, oklch(50% 0.1 250 / 0.28), transparent 70%);
+}
+
+.ringed-planet {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  width: 320px;
+  height: 320px;
+  opacity: 0.16;
+  transform: rotate(-15deg);
+  pointer-events: none;
+}
+.ringed-planet .core {
+  position: absolute; left: 50%; top: 50%; width: 210px; height: 210px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.9), oklch(55% 0.1 275) 55%, transparent 75%);
+  transform: translate(-50%, -50%);
+}
+.ringed-planet .ring-1 {
+  position: absolute; left: 50%; top: 50%; width: 320px; height: 104px;
+  border: 2px solid rgba(255,255,255,0.7); border-radius: 50%; transform: translate(-50%, -50%);
+}
+.ringed-planet .ring-2 {
+  position: absolute; left: 50%; top: 50%; width: 292px; height: 76px;
+  border: 1px solid rgba(255,255,255,0.4); border-radius: 50%; transform: translate(-50%, -50%);
+}
+
+.twinkle-spark {
+  position: absolute;
+  width: 6px; height: 6px;
+  opacity: 0.8;
+  animation: twinkle 3.4s ease-in-out infinite;
+}
+@keyframes twinkle { 0%, 100% { opacity: 0.25; } 50% { opacity: 0.9; } }
+.twinkle-spark::before, .twinkle-spark::after { content: ''; position: absolute; background: rgba(255,255,255,0.7); }
+.twinkle-spark::before { left: 2.5px; top: -14px; width: 1px; height: 34px; }
+.twinkle-spark::after { top: 2.5px; left: -14px; width: 34px; height: 1px; }
+
+.price-sheet-eyebrow {
+  position: relative;
+  text-align: center;
+  color: rgba(230,230,245,0.55);
+  font-size: 13px;
+  letter-spacing: 0.26em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.price-sheet-logo { position: relative; display: flex; justify-content: center; margin-top: 20px; }
+.price-sheet-logo img { width: 180px; height: 180px; object-fit: contain; }
+
+.price-sheet-title {
+  position: relative; text-align: center; margin-top: 10px;
+  color: #f2f2f8; font-size: 30px; font-weight: 700; letter-spacing: 0.02em;
+  font-family: var(--font-display);
+}
+
+.ring-divider {
+  position: relative;
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  margin: 30px 24px 0;
+}
+.ring-divider .line { flex: 1; height: 1px; max-width: 260px; }
+.ring-divider .line.left { background: linear-gradient(90deg, transparent, oklch(55% 0.09 275 / 0.6)); }
+.ring-divider .line.right { background: linear-gradient(90deg, oklch(55% 0.09 275 / 0.6), transparent); }
+.ring-divider .dot {
+  width: 7px; height: 7px; border-radius: 50%; border: 1px solid oklch(75% 0.1 275); position: relative;
+}
+.ring-divider .dot::after {
+  content: ''; position: absolute; left: 50%; top: 50%; width: 22px; height: 8px;
+  border: 1px solid oklch(75% 0.1 275 / 0.7); border-radius: 50%; transform: translate(-50%,-50%) rotate(-18deg);
+}
+
+.tier-block { position: relative; padding: 0 40px; margin-top: 48px; }
+@media (max-width: 640px) { .tier-block { padding: 0 20px; } }
+
+.tier-heading { display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.tier-marker {
+  width: 9px; height: 9px; border-radius: 2px; background: oklch(75% 0.13 275);
+  transform: rotate(45deg); box-shadow: 0 0 12px oklch(75% 0.13 275 / 0.7); flex-shrink: 0;
+}
+.tier-heading .tier-name { font-size: 22px; font-weight: 600; letter-spacing: 0.02em; color: #fff; font-family: var(--font-display); }
+.tier-heading .tier-name b { color: oklch(78% 0.13 275); font-weight: 600; }
+.tier-heading .tier-sub { font-size: 14px; color: rgba(240,240,250,0.55); }
+
+.tier-consult {
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 2px;
+  background: rgba(255,255,255,0.02);
+  text-align: center;
+  padding: 20px 0;
+  color: rgba(240,240,250,0.85);
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+.tier-table-wrap { overflow-x: auto; border: 1px solid rgba(255,255,255,0.14); }
+.tier-table { width: 100%; min-width: 560px; border-collapse: collapse; }
+.tier-table th {
+  padding: 14px 8px; text-align: center; font-size: 13.5px; letter-spacing: 0.03em;
+  color: rgba(240,240,250,0.75); border-bottom: 1px solid rgba(255,255,255,0.14);
+  border-right: 1px solid rgba(255,255,255,0.14); font-weight: 500;
+}
+.tier-table th:last-child { border-right: none; }
+.tier-table td {
+  padding: 17px 8px; text-align: center; font-size: 16px; color: #f2f2f8; font-weight: 500;
+  border-right: 1px solid rgba(255,255,255,0.14); border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.tier-table td:first-child { font-weight: 400; }
+.tier-table td:last-child { border-right: none; }
+.tier-table tr:last-child td { border-bottom: none; }
+
+.ir50-block {
+  border: 1px solid rgba(255,255,255,0.14);
+  background: linear-gradient(135deg, rgba(255,255,255,0.03), transparent);
+  padding: 26px 28px;
+  display: flex; align-items: baseline; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+}
+.ir50-price { display: flex; align-items: baseline; gap: 12px; }
+.ir50-price .amount { font-size: 16px; font-weight: 700; color: #f2f2f8; }
+.ir50-price .start-tag { font-size: 14px; letter-spacing: 0.06em; color: oklch(78% 0.13 275); font-weight: 600; }
+.ir50-note { font-size: 13px; color: rgba(240,240,250,0.5); text-align: right; max-width: 320px; }
+
+.site-domain-tag {
+  position: relative; text-align: center; margin-top: 56px;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  color: rgba(240,240,250,0.45); font-size: 14px; letter-spacing: 0.03em;
+}
+.site-domain-tag .globe {
+  width: 14px; height: 14px; border: 1px solid rgba(240,240,250,0.5); border-radius: 50%; position: relative;
+}
+.site-domain-tag .globe::before { content:''; position:absolute; left:0; right:0; top:50%; height:1px; background:rgba(240,240,250,0.5); }
+.site-domain-tag .globe::after { content:''; position:absolute; top:0; bottom:0; left:50%; width:1px; background:rgba(240,240,250,0.5); }
+
 /* utility */
 .mt-8 { margin-top: 8px; } .mt-16 { margin-top: 16px; } .mt-24 { margin-top: 24px; } .mt-32 { margin-top: 32px; }
 .text-center { text-align: center; }
