@@ -1,5 +1,6 @@
 // Vercel Serverless Function — 견적문의 폼 제출 처리
 // 1) Supabase에 저장  2) 관리자에게 Resend로 이메일 알림
+// 폼 항목: 차종(car_type) · 연식(car_year) · 연락처(phone) · 관심 필름(film_type) · 문의(message)
 
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -7,9 +8,9 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ ok: false, error: 'Method not allowed' });
   }
 
-  const { name, phone, email, car_type, film_type, message, agree } = req.body || {};
+  const { car_type, car_year, phone, film_type, message, agree } = req.body || {};
 
-  if (!name || !phone || !email || !agree) {
+  if (!car_type || !phone || !agree) {
     return res.status(400).json({ ok: false, error: '필수 항목이 누락되었습니다.' });
   }
 
@@ -27,7 +28,7 @@ module.exports = async function handler(req, res) {
         'Content-Type': 'application/json',
         Prefer: 'return=minimal',
       },
-      body: JSON.stringify({ name, phone, email, car_type, film_type, message }),
+      body: JSON.stringify({ car_type, car_year, phone, film_type, message }),
     });
 
     if (!dbRes.ok) {
@@ -38,6 +39,7 @@ module.exports = async function handler(req, res) {
 
     if (RESEND_API_KEY && ADMIN_EMAIL) {
       try {
+        const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
         await fetch('https://api.resend.com/emails', {
           method: 'POST',
           headers: {
@@ -47,15 +49,14 @@ module.exports = async function handler(req, res) {
           body: JSON.stringify({
             from: 'onboarding@resend.dev',
             to: ADMIN_EMAIL,
-            subject: `[COSMIC SHIELD] 새 견적문의 - ${name}`,
+            subject: `[COSMIC SHIELD] 새 견적문의 - ${car_type}${car_year ? ` (${car_year})` : ''}`,
             html: `
               <h2>새 견적문의가 접수되었습니다</h2>
-              <p><b>이름:</b> ${name}</p>
-              <p><b>연락처:</b> ${phone}</p>
-              <p><b>이메일:</b> ${email}</p>
-              <p><b>차종:</b> ${car_type || '-'}</p>
-              <p><b>관심 필름:</b> ${film_type || '-'}</p>
-              <p><b>문의사항:</b> ${message || '-'}</p>
+              <p><b>차종:</b> ${esc(car_type)}</p>
+              <p><b>연식:</b> ${esc(car_year || '-')}</p>
+              <p><b>연락처:</b> ${esc(phone)}</p>
+              <p><b>관심 필름:</b> ${esc(film_type || '-')}</p>
+              <p><b>문의사항:</b> ${esc(message || '-')}</p>
             `,
           }),
         });

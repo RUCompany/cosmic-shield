@@ -39,10 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const created = row.created_at ? new Date(row.created_at).toLocaleString('ko-KR') : '-';
         return `
         <tr data-id="${row.id}">
-          <td>${escapeHtml(row.name)}</td>
+          <td>${escapeHtml(row.car_type || row.name || "-")}</td>
+          <td>${escapeHtml(row.car_year || "-")}</td>
           <td>${escapeHtml(row.phone)}</td>
-          <td>${escapeHtml(row.email)}</td>
-          <td>${escapeHtml(row.car_type || '-')}</td>
           <td>${escapeHtml(row.film_type || '-')}</td>
           <td class="admin-msg-cell" title="${escapeHtml(row.message || '')}">${escapeHtml(row.message || '-')}</td>
           <td>${created}</td>

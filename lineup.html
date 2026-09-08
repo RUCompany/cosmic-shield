@@ -4,25 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PPF 라인업 — COSMIC SHIELD</title>
-<meta name="description" content="COSMIC-65, COSMIC-75, COSMIC-MATT, COSMIC-BLACK — COSMIC SHIELD의 4가지 PPF 라인업을 소개합니다.">
-<link rel="stylesheet" href="./assets/styles.css">
+<meta name="description" content="COSMIC-65, COSMIC-75, COSMIC-MATT, COSMIC-BLACK — 같은 기준으로 검증된 COSMIC SHIELD의 4가지 핵심 PPF 라인업.">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./assets/site.css">
 </head>
 <body data-page="lineup">
 
 <div class="starfield"></div>
+<div class="cosmos-glow"></div>
 
 <header class="site-header">
   <div class="container nav">
-    <a href="index.html" class="brand"><img src="./brand_logo/logo-white.png" alt="COSMIC SHIELD"></a>
-    <nav class="nav-links">
+    <a href="index.html" class="brand" aria-label="COSMIC SHIELD 홈"><img src="./brand_logo/logo-white-crop.png" alt="COSMIC — AUTOMOBILE PROTECTION"></a>
+    <nav class="nav-links" aria-label="주요 메뉴">
       <a href="index.html" data-page="home">홈</a>
       <a href="lineup.html" data-page="lineup">PPF 라인업</a>
       <a href="quote.html" data-page="quote">견적안내</a>
       <a href="https://cosmicshield.shop/warranty" target="_blank" rel="noopener">보증서 조회</a>
     </nav>
-    <div class="nav-cta">
-      <a href="quote.html" class="btn btn-primary btn-sm">견적 문의</a>
-      <button class="nav-toggle" aria-label="메뉴 열기">
+    <div class="nav-actions">
+      <a href="quote.html#quote-form" class="pill-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H8l-4 4V5z"/></svg>
+        견적 문의
+      </a>
+      <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
     </div>
@@ -31,196 +36,426 @@
 
 <main>
 
+  <!-- PAGE HERO -->
   <section class="page-hero">
-    <div class="spotlight-beam"></div>
+    <div class="hero-bg lineup" aria-hidden="true"></div>
     <div class="container">
-      <div class="eyebrow">PRODUCT LINEUP</div>
-      <h1>PPF <span class="grad-text">라인업</span></h1>
-      <p class="lead"><b>기본형부터 무광, 블랙 컬러까지</b> — 차량과 취향에 맞는 필름을 선택하세요.</p>
+      <div class="eyebrow">PPF Lineup</div>
+      <h1>라인업</h1>
+      <p class="lead">같은 기준으로 검증된 4가지 핵심 라인업 — 보호 성능, 시공성, 가격의 균형을 함께 설계했습니다.</p>
     </div>
   </section>
 
-  <!-- INDEX -->
-  <section style="padding-top:0;padding-bottom:40px;">
+  <!-- CARDS -->
+  <section style="padding-bottom:104px;">
     <div class="container">
-      <div class="index-list reveal">
-        <a href="#cosmic-65" class="index-row">
-          <span class="index-num">01</span>
-          <span class="index-name">COSMIC-65</span>
-          <span class="index-tag">기본형 · 6.5mil</span>
-          <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="card-grid reveal" style="margin-top:0;">
+
+        <a href="#cosmic-65" class="film-card">
+          <div class="film-card-head"><span class="tag-pill">스탠다드</span><span class="series">6.5 MIL · GLOSS</span></div>
+          <h3>COSMIC-65</h3>
+          <div class="sub">생활보호 최적화 · 표준 유광 PPF</div>
+          <p class="desc">PPF 본연의 보호 성능에 충실한 기본형. 굴곡이 많은 생활보호 부위 전 품목에 적합한 두께와 시공성.</p>
+          <div class="film-card-foot"><span class="kw">DAILY · FLEXIBLE</span><span class="text-link">자세히 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></div>
         </a>
-        <a href="#cosmic-75" class="index-row">
-          <span class="index-num">02</span>
-          <span class="index-name">COSMIC-75</span>
-          <span class="index-tag">고내구 발수 · 7.5mil</span>
-          <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+        <a href="#cosmic-75" class="film-card">
+          <div class="film-card-head"><span class="tag-pill">시그니처</span><span class="series">7.5 MIL · GLOSS</span></div>
+          <h3>COSMIC-75</h3>
+          <div class="sub">고발수 코팅층 · 연질급 시공성의 경질 PPF</div>
+          <p class="desc">두툼한 고발수 코팅층과 강화된 내구성. 경질 필름에 연질 PPF의 시공성을 더한 특수 기술.</p>
+          <div class="film-card-foot"><span class="kw">HYDROPHOBIC · DURABLE</span><span class="text-link">자세히 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></div>
         </a>
-        <a href="#cosmic-matt" class="index-row">
-          <span class="index-num">03</span>
-          <span class="index-name">COSMIC-MATT</span>
-          <span class="index-tag">반무광 스타일</span>
-          <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+        <a href="#cosmic-matt" class="film-card">
+          <div class="film-card-head"><span class="tag-pill neutral">매트</span><span class="series">SATIN FINISH</span></div>
+          <h3>COSMIC-MATT</h3>
+          <div class="sub">반무광 · 관리 부담이 적은 표면</div>
+          <p class="desc">과하지 않은 반무광 질감. 오염 흔적이 잘 드러나지 않아 관리 부담이 적습니다.</p>
+          <div class="film-card-foot"><span class="kw">SATIN · LOW-CARE</span><span class="text-link">자세히 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></div>
         </a>
-        <a href="#cosmic-black" class="index-row">
-          <span class="index-num">04</span>
-          <span class="index-name">COSMIC-BLACK</span>
-          <span class="index-tag">초고광택 블랙</span>
-          <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+        <a href="#cosmic-black" class="film-card">
+          <div class="film-card-head"><span class="tag-pill neutral">컬러</span><span class="series">GLOSS BLACK</span></div>
+          <h3>COSMIC-BLACK</h3>
+          <div class="sub">초고광택 블랙 · 컬러체인지 + 보호</div>
+          <p class="desc">초고광택 블랙 컬러 PPF. 컬러체인지와 도장 보호를 한 번의 시공으로.</p>
+          <div class="film-card-foot"><span class="kw">COLOR · HIGH GLOSS</span><span class="text-link">자세히 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></div>
         </a>
+
       </div>
     </div>
   </section>
 
-  <section style="padding-top:0;">
+  <!-- DETAILS -->
+  <section class="bordered" style="border-top:1px solid var(--line);">
     <div class="container">
 
       <!-- COSMIC-65 -->
-      <div class="film-detail reveal" id="cosmic-65">
-        <div class="film-detail-media">
-          <img src="https://placehold.co/720x560/12131c/9297a3?text=COSMIC-65" alt="COSMIC-65">
+      <div class="film-detail first reveal" id="cosmic-65">
+        <div class="eyebrow">COSMIC-65 시리즈 · 6.5 MIL · GLOSS</div>
+        <h2>COSMIC-65</h2>
+        <p class="accent-sub">생활보호 PPF에 최적화된 표준 유광 필름</p>
+        <p class="desc">PPF 본연의 기능에 충실한 기본형 라인업입니다. 6.5mil 두께는 사이드미러, 헤드라이트, 도어컵, 도어엣지, 트렁크 리드처럼 굴곡이 많은 생활보호 부위에서 무리 없이 늘어나고 안정적으로 안착합니다.</p>
+        <p class="desc">과하지 않은 두께와 균일한 시공성으로 생활보호 PPF 전 품목에 적합하며, 처음 PPF를 접하는 오너에게 가장 합리적인 출발점입니다.</p>
+
+        <div class="spec-strip">
+          <div class="spec"><div class="spec-k">THICKNESS</div><div class="spec-v">6.5 mil (≈165 μm)</div></div>
+          <div class="spec"><div class="spec-k">FINISH</div><div class="spec-v">유광 (Gloss)</div></div>
+          <div class="spec"><div class="spec-k">TOP COAT</div><div class="spec-v">발수 코팅층</div></div>
+          <div class="spec"><div class="spec-k">BEST FOR</div><div class="spec-v">생활보호 전 품목 · 데일리카</div></div>
         </div>
-        <div class="film-detail-copy">
-          <span class="step-num" style="font-size:1.8rem;display:inline-block;margin-bottom:4px;">01</span>
-          <span class="film-tag">6.5mil</span>
-          <h2 style="margin-top:14px;">COSMIC-65</h2>
-          <p class="lead">PPF 본연의 기능에 충실한 기본형 라인업입니다. 처음 PPF를 시공하시는 분들께 적합한 표준 보호 성능을 제공합니다.</p>
-          <div class="spec-list">
-            <div class="spec-item"><div class="spec-label">두께</div><div class="spec-value">6.5 mil</div></div>
-            <div class="spec-item"><div class="spec-label">광택</div><div class="spec-value">유광</div></div>
-            <div class="spec-item"><div class="spec-label">특징</div><div class="spec-value">기본 보호 성능</div></div>
-            <div class="spec-item"><div class="spec-label">추천 용도</div><div class="spec-value">데일리카 기본 보호</div></div>
+
+        <div class="panel-grid">
+          <div>
+            <div class="panel-label">필름 단면 구조</div>
+            <div class="panel">
+              <svg viewBox="0 0 560 250" role="img" aria-label="COSMIC-65 필름 단면 구조 — 발수 탑코트, TPU 본체, 점착층, 이형 필름">
+                <defs>
+                  <linearGradient id="tpu65" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#62e0ff" stop-opacity="0.22"/>
+                    <stop offset="1" stop-color="#62e0ff" stop-opacity="0.05"/>
+                  </linearGradient>
+                </defs>
+                <path d="M62 40 H52 V186 H62" fill="none" stroke="#62e0ff" stroke-width="1"/>
+                <text class="mono" x="34" y="113" fill="#62e0ff" font-size="10.5" text-anchor="middle" transform="rotate(-90 34 113)" letter-spacing="2">6.5 mil ≈ 165 μm</text>
+                <rect x="84" y="40" width="270" height="12" fill="#62e0ff" opacity="0.9"/>
+                <rect x="84" y="52" width="270" height="110" fill="url(#tpu65)" stroke="rgba(98,224,255,0.45)"/>
+                <rect x="84" y="162" width="270" height="24" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.22)"/>
+                <rect x="84" y="194" width="270" height="14" fill="none" stroke="rgba(255,255,255,0.28)" stroke-dasharray="4 4"/>
+                <g stroke="rgba(255,255,255,0.22)"><path d="M354 46 H382"/><path d="M354 107 H382"/><path d="M354 174 H382"/><path d="M354 201 H382"/></g>
+                <g fill="#f3f5f7" font-size="12.5" font-weight="600">
+                  <text x="390" y="50">발수 탑코트</text>
+                  <text x="390" y="111">TPU 본체</text>
+                  <text x="390" y="178">아크릴 점착층</text>
+                  <text x="390" y="205">이형 필름</text>
+                </g>
+                <g class="mono" fill="#767d88" font-size="9.5" letter-spacing="1">
+                  <text class="mono" x="390" y="64">HYDROPHOBIC COAT</text>
+                  <text class="mono" x="390" y="125">POLYURETHANE</text>
+                  <text class="mono" x="390" y="192">ADHESIVE</text>
+                  <text class="mono" x="390" y="219">LINER · REMOVED</text>
+                </g>
+              </svg>
+            </div>
           </div>
-          <a href="quote.html" class="btn btn-primary">이 필름으로 견적받기</a>
+          <div>
+            <div class="panel-label">시공 예시</div>
+            <div class="img-slot" data-img="cosmic-65" style="--ratio: 4 / 3;">
+              <div class="img-slot-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <span>IMAGE</span><span>images/cosmic-65.jpg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="traits">
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14c2-4 6-6 10-6s6 2 6 2M4 18c3-2 6-3 9-3"/><circle cx="18" cy="8" r="2"/></svg>
+            <h4>안정적인 시공성</h4><p>굴곡 부위에서도 무리 없는 연신과 안착</p>
+          </div>
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg>
+            <h4>생활보호 전 품목 대응</h4><p>사이드미러 · 라이트 · 도어컵 · 엣지</p>
+          </div>
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.2 8.4-7 10-3.8-1.6-7-5-7-10V6l7-3z"/></svg>
+            <h4>표준 보호 성능</h4><p>자갈 · 스크래치 · 자외선으로부터 도장 보호</p>
+          </div>
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5h4a1.5 1.5 0 010 3h-3a1.5 1.5 0 000 3h4"/></svg>
+            <h4>합리적인 가격</h4><p>PPF 입문에 가장 부담 없는 선택</p>
+          </div>
         </div>
       </div>
 
       <!-- COSMIC-75 -->
-      <div class="film-detail reverse reveal" id="cosmic-75">
-        <div class="film-detail-media">
-          <img src="https://placehold.co/720x560/12131c/35e6cf?text=COSMIC-75" alt="COSMIC-75">
+      <div class="film-detail reveal" id="cosmic-75">
+        <div class="eyebrow">COSMIC-75 시리즈 · 7.5 MIL · GLOSS · SIGNATURE</div>
+        <h2>COSMIC-75</h2>
+        <p class="accent-sub">연질 PPF의 시공성을 가진 경질 PPF</p>
+        <p class="desc">두툼한 고발수 코팅층을 얹은 7.5mil 경질 PPF입니다. 강화된 코팅층은 물과 오염을 밀어내고 잔기스에 강한 표면을 오랜 시간 유지합니다.</p>
+
+        <div class="callout">
+          <div class="eyebrow">Core Technology</div>
+          <p>일반적으로 경질 PPF는 내구성이 높은 대신 굴곡 부위 시공이 까다롭습니다. COSMIC-75는 코팅층과 TPU 본체의 배합을 조정해 경질 필름의 내구성은 그대로 유지하면서, 연질 PPF에 가까운 연신율과 복원력을 확보했습니다. 시공자에게는 작업의 여유를, 오너에게는 오래가는 보호를 제공합니다.</p>
         </div>
-        <div class="film-detail-copy">
-          <span class="step-num" style="font-size:1.8rem;display:inline-block;margin-bottom:4px;">02</span>
-          <span class="film-tag">7.5mil</span>
-          <h2 style="margin-top:14px;">COSMIC-75</h2>
-          <p class="lead">투명 7.5mil 두께에 높은 발수층과 발수층 내구성을 적용해, 오랜 시간이 지나도 높은 오염 저항성을 유지합니다.</p>
-          <div class="spec-list">
-            <div class="spec-item"><div class="spec-label">두께</div><div class="spec-value">7.5 mil</div></div>
-            <div class="spec-item"><div class="spec-label">발수층</div><div class="spec-value">고내구 발수 코팅</div></div>
-            <div class="spec-item"><div class="spec-label">오염 저항성</div><div class="spec-value">매우 높음</div></div>
-            <div class="spec-item"><div class="spec-label">추천 용도</div><div class="spec-value">장거리 · 오염 환경 주행</div></div>
+
+        <div class="spec-strip">
+          <div class="spec"><div class="spec-k">THICKNESS</div><div class="spec-v">7.5 mil (≈190 μm)</div></div>
+          <div class="spec"><div class="spec-k">FINISH</div><div class="spec-v">유광 (Gloss)</div></div>
+          <div class="spec"><div class="spec-k">TOP COAT</div><div class="spec-v">고발수 · 고내구 코팅층</div></div>
+          <div class="spec"><div class="spec-k">BEST FOR</div><div class="spec-v">프론트 · 풀패키지 · 장기 보호</div></div>
+        </div>
+
+        <div class="panel-grid">
+          <div>
+            <div class="panel-label">필름 단면 구조</div>
+            <div class="panel">
+              <svg viewBox="0 0 560 250" role="img" aria-label="COSMIC-75 필름 단면 구조 — 강화된 고발수 코팅층, TPU 본체, 점착층, 이형 필름">
+                <defs>
+                  <linearGradient id="tpu75" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#62e0ff" stop-opacity="0.22"/>
+                    <stop offset="1" stop-color="#62e0ff" stop-opacity="0.05"/>
+                  </linearGradient>
+                  <linearGradient id="coat75" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#9aefff"/>
+                    <stop offset="1" stop-color="#62e0ff"/>
+                  </linearGradient>
+                </defs>
+                <path d="M62 30 H52 V192 H62" fill="none" stroke="#62e0ff" stroke-width="1"/>
+                <text class="mono" x="34" y="111" fill="#62e0ff" font-size="10.5" text-anchor="middle" transform="rotate(-90 34 111)" letter-spacing="2">7.5 mil ≈ 190 μm</text>
+                <rect x="84" y="30" width="270" height="28" fill="url(#coat75)"/>
+                <rect x="84" y="58" width="270" height="110" fill="url(#tpu75)" stroke="rgba(98,224,255,0.45)"/>
+                <rect x="84" y="168" width="270" height="24" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.22)"/>
+                <rect x="84" y="200" width="270" height="14" fill="none" stroke="rgba(255,255,255,0.28)" stroke-dasharray="4 4"/>
+                <g stroke="rgba(255,255,255,0.22)"><path d="M354 44 H382"/><path d="M354 113 H382"/><path d="M354 180 H382"/><path d="M354 207 H382"/></g>
+                <g fill="#f3f5f7" font-size="12.5" font-weight="600">
+                  <text x="390" y="48" fill="#9aefff">고발수 코팅층 · 강화</text>
+                  <text x="390" y="117">TPU 본체 · 연질급 배합</text>
+                  <text x="390" y="184">아크릴 점착층</text>
+                  <text x="390" y="211">이형 필름</text>
+                </g>
+                <g fill="#767d88" font-size="9.5" letter-spacing="1">
+                  <text class="mono" x="390" y="62">THICK HYDROPHOBIC COAT</text>
+                  <text class="mono" x="390" y="131">FLEXIBLE-GRADE TPU</text>
+                  <text class="mono" x="390" y="198">ADHESIVE</text>
+                  <text class="mono" x="390" y="225">LINER · REMOVED</text>
+                </g>
+              </svg>
+            </div>
           </div>
-          <a href="quote.html" class="btn btn-primary">이 필름으로 견적받기</a>
+          <div>
+            <div class="panel-label">시공 예시</div>
+            <div class="img-slot" data-img="cosmic-75" style="--ratio: 4 / 3;">
+              <div class="img-slot-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <span>IMAGE</span><span>images/cosmic-75.jpg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="traits">
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4.5 6 7.5 6 11a6 6 0 01-12 0c0-3.5 3-6.5 6-11z"/></svg>
+            <h4>고발수 코팅층</h4><p>물과 오염을 밀어내는 두툼한 탑코트</p>
+          </div>
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.2 8.4-7 10-3.8-1.6-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+            <h4>강화된 내구성</h4><p>잔기스와 장기 사용에 강한 경질 구조</p>
+          </div>
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14c2-4 6-6 10-6s6 2 6 2M4 18c3-2 6-3 9-3"/><circle cx="18" cy="8" r="2"/></svg>
+            <h4>연질급 시공성</h4><p>경질 필름이면서 곡면에서도 여유 있는 작업</p>
+          </div>
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <h4>높은 오염 저항</h4><p>시간이 지나도 유지되는 발수 성능</p>
+          </div>
         </div>
       </div>
 
       <!-- COSMIC-MATT -->
       <div class="film-detail reveal" id="cosmic-matt">
-        <div class="film-detail-media">
-          <img src="https://placehold.co/720x560/12131c/7c5cff?text=COSMIC-MATT" alt="COSMIC-MATT">
+        <div class="eyebrow">COSMIC-MATT 시리즈 · SATIN FINISH</div>
+        <h2>COSMIC-MATT</h2>
+        <p class="accent-sub">은은한 반무광, 낮은 관리 부담</p>
+        <p class="desc">과하지 않은 반무광(Satin) 질감으로 차량의 인상을 차분하게 바꾸는 라인업입니다. 표면 특성상 물자국과 오염 흔적이 잘 드러나지 않아 세차와 관리 부담이 적습니다.</p>
+        <p class="desc">스타일과 실용성을 동시에 원하는 오너에게 추천합니다.</p>
+
+        <div class="spec-strip">
+          <div class="spec"><div class="spec-k">FINISH</div><div class="spec-v">반무광 (Satin)</div></div>
+          <div class="spec"><div class="spec-k">SURFACE</div><div class="spec-v">저오염 · 물자국 억제</div></div>
+          <div class="spec"><div class="spec-k">STYLE</div><div class="spec-v">은은한 무광 톤</div></div>
+          <div class="spec"><div class="spec-k">BEST FOR</div><div class="spec-v">스타일 중시 오너 · 풀패키지</div></div>
         </div>
-        <div class="film-detail-copy">
-          <span class="step-num" style="font-size:1.8rem;display:inline-block;margin-bottom:4px;">03</span>
-          <span class="film-tag">MATT</span>
-          <h2 style="margin-top:14px;">COSMIC-MATT</h2>
-          <p class="lead">과하지 않은 반무광 스타일로, 때가 많이 타지 않는 표면 특성을 갖춘 라인업입니다. 스타일과 실용성을 동시에 원하는 분들께 추천합니다.</p>
-          <div class="spec-list">
-            <div class="spec-item"><div class="spec-label">마감</div><div class="spec-value">반무광 (Satin)</div></div>
-            <div class="spec-item"><div class="spec-label">오염 흔적</div><div class="spec-value">잘 드러나지 않음</div></div>
-            <div class="spec-item"><div class="spec-label">스타일</div><div class="spec-value">은은한 무광 톤</div></div>
-            <div class="spec-item"><div class="spec-label">추천 용도</div><div class="spec-value">스타일 중시 오너</div></div>
+
+        <div class="panel-grid">
+          <div>
+            <div class="panel-label">시공 예시</div>
+            <div class="img-slot" data-img="cosmic-matt" style="--ratio: 4 / 3;">
+              <div class="img-slot-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <span>IMAGE</span><span>images/cosmic-matt.jpg</span>
+              </div>
+            </div>
           </div>
-          <a href="quote.html" class="btn btn-primary">이 필름으로 견적받기</a>
+          <div>
+            <div class="panel-label">표면 특성</div>
+            <div class="panel">
+              <div class="panel-list">
+                <div class="chip"><span>반사광을 분산시키는 새틴 표면<small>DIFFUSED REFLECTION</small></span></div>
+                <div class="chip"><span>물자국 · 지문 흔적 최소화<small>LOW VISIBLE MARKS</small></span></div>
+                <div class="chip"><span>유광 도장을 무광으로 전환<small>GLOSS → SATIN</small></span></div>
+                <div class="chip"><span>전용 무광 관리제로 간편 유지<small>EASY MAINTENANCE</small></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="traits">
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17c4-2 6-6 9-6s5 4 9 2"/><path d="M3 12c4-2 6-6 9-6s5 4 9 2"/></svg>
+            <h4>새틴 질감</h4><p>과하지 않은 반무광 마감</p>
+          </div>
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4.5 6 7.5 6 11a6 6 0 01-12 0c0-3.5 3-6.5 6-11z"/></svg>
+            <h4>낮은 관리 부담</h4><p>오염 흔적이 잘 드러나지 않는 표면</p>
+          </div>
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.2 8.4-7 10-3.8-1.6-7-5-7-10V6l7-3z"/></svg>
+            <h4>도장 보호</h4><p>스타일 변화와 보호를 동시에</p>
+          </div>
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l6-6M14 4l6 6-9 9H5v-6l8-9z"/></svg>
+            <h4>인상 전환</h4><p>차량의 분위기를 차분하게 바꾸는 선택</p>
+          </div>
         </div>
       </div>
 
       <!-- COSMIC-BLACK -->
-      <div class="film-detail reverse reveal" id="cosmic-black">
-        <div class="film-detail-media">
-          <img src="https://placehold.co/720x560/0d0e15/eef0f4?text=COSMIC-BLACK" alt="COSMIC-BLACK">
+      <div class="film-detail reveal" id="cosmic-black">
+        <div class="eyebrow">COSMIC-BLACK 시리즈 · GLOSS BLACK · COLOR</div>
+        <h2>COSMIC-BLACK</h2>
+        <p class="accent-sub">초고광택 블랙, 컬러체인지와 보호를 한 번에</p>
+        <p class="desc">초고광택 표면의 블랙 컬러 PPF입니다. 높은 발수 성능과 내구성 있는 코팅층을 갖춰 컬러체인지 필름이면서도 도장 보호 성능을 함께 제공합니다.</p>
+        <p class="desc">루프, 보닛, 포인트 부위의 블랙 컬러체인지와 전체 랩핑까지 — 컬러와 보호를 한 번의 시공으로 해결합니다.</p>
+
+        <div class="spec-strip">
+          <div class="spec"><div class="spec-k">COLOR</div><div class="spec-v">블랙</div></div>
+          <div class="spec"><div class="spec-k">FINISH</div><div class="spec-v">초고광택 (High Gloss)</div></div>
+          <div class="spec"><div class="spec-k">TOP COAT</div><div class="spec-v">발수 · 고내구 코팅층</div></div>
+          <div class="spec"><div class="spec-k">BEST FOR</div><div class="spec-v">컬러체인지 + 보호 · 포인트 부위</div></div>
         </div>
-        <div class="film-detail-copy">
-          <span class="step-num" style="font-size:1.8rem;display:inline-block;margin-bottom:4px;">04</span>
-          <span class="film-tag">BLACK</span>
-          <h2 style="margin-top:14px;">COSMIC-BLACK</h2>
-          <p class="lead">블랙 컬러 PPF로, 초고광택 표면과 높은 발수 성능, 그리고 높은 내구성의 코팅층을 갖추고 있습니다. 컬러체인지와 보호를 동시에 원하는 분들께 적합합니다.</p>
-          <div class="spec-list">
-            <div class="spec-item"><div class="spec-label">컬러</div><div class="spec-value">블랙</div></div>
-            <div class="spec-item"><div class="spec-label">광택</div><div class="spec-value">초고광택</div></div>
-            <div class="spec-item"><div class="spec-label">발수 성능</div><div class="spec-value">높음</div></div>
-            <div class="spec-item"><div class="spec-label">추천 용도</div><div class="spec-value">컬러체인지 + 보호</div></div>
+
+        <div class="panel-grid">
+          <div>
+            <div class="panel-label">시공 예시</div>
+            <div class="img-slot" data-img="cosmic-black" style="--ratio: 4 / 3;">
+              <div class="img-slot-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></svg>
+                <span>IMAGE</span><span>images/cosmic-black.jpg</span>
+              </div>
+            </div>
           </div>
-          <a href="quote.html" class="btn btn-primary">이 필름으로 견적받기</a>
+          <div>
+            <div class="panel-label">표면 특성</div>
+            <div class="panel">
+              <div class="panel-list">
+                <div class="chip"><span>피아노 블랙에 가까운 초고광택<small>PIANO-GLOSS BLACK</small></span></div>
+                <div class="chip"><span>발수 코팅층으로 물기 · 오염 억제<small>HYDROPHOBIC COAT</small></span></div>
+                <div class="chip"><span>컬러체인지 + 도장 보호 동시 해결<small>COLOR + PROTECTION</small></span></div>
+                <div class="chip"><span>루프 · 보닛 · 포인트 부위 추천<small>ROOF · HOOD · ACCENT</small></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="traits">
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 010 18z" fill="currentColor" stroke="none" opacity="0.5"/></svg>
+            <h4>초고광택 블랙</h4><p>깊이감 있는 광택의 블랙 컬러</p>
+          </div>
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4.5 6 7.5 6 11a6 6 0 01-12 0c0-3.5 3-6.5 6-11z"/></svg>
+            <h4>높은 발수 성능</h4><p>물기와 오염을 밀어내는 코팅층</p>
+          </div>
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.2 8.4-7 10-3.8-1.6-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+            <h4>코팅 내구성</h4><p>오래 유지되는 광택과 보호 성능</p>
+          </div>
+          <div class="trait">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l6-6M14 4l6 6-9 9H5v-6l8-9z"/></svg>
+            <h4>컬러체인지</h4><p>보호와 스타일 변경을 한 번에</p>
+          </div>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- COMPARISON TABLE -->
-  <section style="background:var(--surface-0);">
+  <!-- COMPARE -->
+  <section class="section bordered surface">
     <div class="container">
-      <div class="section-head center reveal">
-        <div class="eyebrow" style="justify-content:center;">COMPARE</div>
-        <h2>라인업 한눈에 비교하기</h2>
+      <div class="section-head reveal">
+        <div class="eyebrow">Compare</div>
+        <h2>라인업 비교 가이드</h2>
+        <p class="lead">네 가지 라인업의 특성을 한눈에 비교하세요. 시공 범위별 가격은 견적안내에서 확인할 수 있습니다.</p>
       </div>
-      <div class="table-wrap reveal">
+      <div class="table-wrap reveal mt-48">
         <table>
           <thead>
             <tr>
-              <th>구분</th>
-              <th>COSMIC-65</th>
-              <th>COSMIC-75</th>
-              <th>COSMIC-MATT</th>
-              <th>COSMIC-BLACK</th>
+              <th></th>
+              <th><span class="th-name">COSMIC-65</span><span class="th-sub">STANDARD · 6.5 MIL</span></th>
+              <th class="hl"><span class="th-name">COSMIC-75</span><span class="th-sub">SIGNATURE · 7.5 MIL</span></th>
+              <th><span class="th-name">COSMIC-MATT</span><span class="th-sub">SATIN</span></th>
+              <th><span class="th-name">COSMIC-BLACK</span><span class="th-sub">GLOSS BLACK</span></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>두께 / 마감</td>
+              <td>두께 · 마감</td>
               <td>6.5 mil · 유광</td>
-              <td>7.5 mil · 유광</td>
+              <td class="hl">7.5 mil · 유광</td>
               <td>반무광 (Satin)</td>
               <td>초고광택 블랙</td>
             </tr>
             <tr>
-              <td>오염 저항성</td>
-              <td>기본</td>
-              <td>매우 높음</td>
-              <td>높음 (때 안탐)</td>
-              <td>높음</td>
+              <td>발수 코팅층</td>
+              <td>표준</td>
+              <td class="hl">고발수 · 두툼한 강화 코팅층</td>
+              <td>무광 전용 코팅</td>
+              <td>고발수</td>
             </tr>
             <tr>
-              <td>내구성</td>
-              <td>표준</td>
-              <td>강화</td>
-              <td>표준~강화</td>
-              <td>높은 코팅 내구성</td>
+              <td>시공성</td>
+              <td>매우 우수 · 생활보호 전 품목</td>
+              <td class="hl">경질이면서 연질급 시공성</td>
+              <td>우수</td>
+              <td>우수</td>
+            </tr>
+            <tr>
+              <td>주요 특징</td>
+              <td><ul><li>기본 보호 성능</li><li>굴곡 부위 안정적 안착</li><li>합리적인 가격</li></ul></td>
+              <td class="hl"><ul><li>높은 오염 저항성</li><li>강화된 내구성</li><li>곡면에서도 여유 있는 작업</li></ul></td>
+              <td><ul><li>은은한 반무광 질감</li><li>오염 흔적 최소화</li><li>낮은 관리 부담</li></ul></td>
+              <td><ul><li>깊이감 있는 블랙 광택</li><li>컬러체인지 + 보호</li><li>코팅 내구성</li></ul></td>
             </tr>
             <tr>
               <td>추천 용도</td>
-              <td>데일리 기본 보호</td>
-              <td>장거리 / 오염 환경</td>
+              <td>생활보호 5종 · 6종, 데일리카</td>
+              <td class="hl">프론트 · 풀패키지, 장기 보호</td>
               <td>스타일 중시 오너</td>
               <td>컬러체인지 + 보호</td>
+            </tr>
+            <tr>
+              <td>가격 포지션</td>
+              <td class="price-pos">$<span>합리적</span></td>
+              <td class="hl price-pos">$$<span>시그니처</span></td>
+              <td class="price-pos">$$<span>스타일</span></td>
+              <td class="price-pos">상담<span>부위별 상이</span></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="table-note">※ 표기된 스펙은 라인업 특징을 요약한 안내이며, 실제 시공 사양은 상담 시 상세히 안내드립니다.</p>
+      <p class="table-note">※ 표기된 스펙은 라인업 특성을 요약한 안내이며, 실제 시공 사양은 차량 상태와 부위에 따라 상담 시 상세히 안내드립니다.</p>
     </div>
   </section>
 
-  <section style="padding-top:0;">
+  <!-- CTA -->
+  <section class="final-cta">
+    <div class="nebula" style="width:700px;height:400px;background:var(--nebula);opacity:0.2;bottom:-200px;left:50%;transform:translateX(-50%);"></div>
     <div class="container">
-      <div class="accent-block reveal">
-        <div class="eyebrow" style="justify-content:center;">GET A QUOTE</div>
-        <h2>어떤 라인업이 맞을지 고민되시나요?</h2>
-        <p class="lead">차종과 원하는 스타일을 알려주시면 맞춤 견적을 안내해 드립니다.</p>
-        <div class="cta-banner-actions">
-          <a href="quote.html" class="btn btn-on-accent">견적 문의하기</a>
-        </div>
+      <h2>어떤 라인업이 맞을지<br>고민되시나요?</h2>
+      <p class="lead mt-24">차종과 희망 부위를 알려주시면 가장 합리적인 조합을 안내해 드립니다.</p>
+      <div class="band-actions">
+        <a href="quote.html#quote-form" class="btn btn-primary">견적 문의하기
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="quote.html" class="btn btn-outline">기준 가격표 보기</a>
       </div>
     </div>
   </section>
@@ -231,35 +466,43 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="./brand_logo/logo-white.png" alt="COSMIC SHIELD">
-        <p>검증된 PPF 라인업과 투명한 견적, 확실한 보증으로 당신의 차를 지키는 자동차 보호필름 전문 브랜드입니다.</p>
+        <img src="./brand_logo/logo-white-crop.png" alt="COSMIC — AUTOMOBILE PROTECTION">
+        <p>직접 검증한 PPF를 직수입·직판하는 자동차 보호필름 브랜드. 검증된 품질을, 합리적인 가격으로.</p>
       </div>
       <div class="footer-col">
-        <h4>사이트</h4>
+        <h4>PPF 라인업</h4>
         <ul>
-          <li><a href="index.html">브랜드 소개</a></li>
-          <li><a href="lineup.html">PPF 라인업</a></li>
+          <li><a href="#cosmic-65">COSMIC-65</a></li>
+          <li><a href="#cosmic-75">COSMIC-75</a></li>
+          <li><a href="#cosmic-matt">COSMIC-MATT</a></li>
+          <li><a href="#cosmic-black">COSMIC-BLACK</a></li>
+          <li><a href="lineup.html">전체 라인업</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>보증 · 견적</h4>
+        <ul>
+          <li><a href="https://cosmicshield.shop/warranty" target="_blank" rel="noopener">보증서 조회</a></li>
           <li><a href="quote.html">견적안내</a></li>
+          <li><a href="quote.html#quote-form">견적 문의</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>고객지원</h4>
         <ul>
-          <li><a href="https://cosmicshield.shop/warranty" target="_blank" rel="noopener">보증서 조회</a></li>
-          <li><a href="quote.html#quote-form">견적 문의</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>문의</h4>
-        <ul>
-          <li>운영시간 09:00 – 18:00</li>
-          <li>주말/공휴일 휴무</li>
+          <li class="muted">운영시간 09:00 – 18:00</li>
+          <li class="muted">주말 · 공휴일 휴무</li>
+          <li><a href="https://cosmicshield.shop" target="_blank" rel="noopener">www.cosmicshield.shop</a></li>
         </ul>
       </div>
     </div>
-    <div class="divider"></div>
+    <div class="footer-biz">
+      <div class="eyebrow ko">사업자 정보</div>
+      <!-- 상호 · 대표자 · 사업자등록번호 · 주소 · 연락처를 아래 문단에 기재하세요 -->
+      <p>COSMIC SHIELD (코스믹 실드) · 자동차 보호필름 직수입 · 직판</p>
+    </div>
     <div class="footer-bottom">
-      <span>© 2026 COSMIC SHIELD. All rights reserved.</span>
+      <span>© 2026 COSMIC SHIELD. ALL RIGHTS RESERVED.</span>
       <span>AUTOMOBILE PROTECTION</span>
     </div>
   </div>
