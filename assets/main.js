@@ -11,11 +11,18 @@ function initNavToggle() {
   const toggle = document.querySelector('.nav-toggle');
   const links = document.querySelector('.nav-links');
   if (!toggle || !links) return;
-  toggle.addEventListener('click', () => {
-    links.classList.toggle('open');
-  });
+  const setOpen = (open) => {
+    links.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+  };
+
+  toggle.addEventListener('click', () => setOpen(!links.classList.contains('open')));
   links.querySelectorAll('a').forEach((a) => {
-    a.addEventListener('click', () => links.classList.remove('open'));
+    a.addEventListener('click', () => setOpen(false));
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setOpen(false);
   });
 }
 
