@@ -987,6 +987,11 @@ td.hl.price-pos { color: var(--accent); }
 }
 .footer-biz .eyebrow { font-size: 10.5px; color: var(--text-3); }
 .footer-biz p { font-size: 13px; color: var(--text-3); margin-top: 12px; line-height: 1.9; }
+.footer-biz strong { color: var(--text-2); font-weight: 600; }
+.footer-biz a { color: var(--text-2); transition: color 0.2s ease; }
+.footer-biz a:hover { color: var(--accent); }
+.footer-biz a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.footer-biz p.legal { margin-top: 16px; }
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -1048,3 +1053,111 @@ td.hl.price-pos { color: var(--accent); }
 .admin-msg-cell { max-width: 240px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .admin-empty { text-align: center; padding: 60px 20px; color: var(--text-3); }
 .admin-table td:first-child, .admin-table th:first-child { color: var(--text); font-size: 15px; width: auto; font-weight: 600; }
+
+/* Legal document (privacy policy) ------------------------------------------ */
+
+.legal-doc { padding: 24px 0 120px; }
+.legal-doc .container { max-width: 880px; }
+.legal-intro {
+  font-size: 15.5px;
+  line-height: 1.95;
+  color: var(--text-2);
+  padding: 26px 28px;
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--bg-1);
+}
+.legal-item { margin-top: 64px; }
+.legal-item h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  font-size: clamp(21px, 2.6vw, 27px);
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.legal-item h2 .num {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.legal-item p {
+  font-size: 15px;
+  line-height: 1.95;
+  color: var(--text-2);
+  margin-top: 20px;
+}
+.legal-item .table-wrap { margin-top: 24px; }
+.legal-table { min-width: 560px; }
+.legal-table td:first-child, .legal-table th:first-child { width: 120px; }
+.legal-list { margin-top: 20px; display: grid; gap: 12px; }
+.legal-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--text-2);
+}
+.legal-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 12px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-dim);
+}
+.legal-list strong { color: var(--text); font-weight: 600; }
+.legal-note {
+  font-size: 13.5px !important;
+  line-height: 1.85 !important;
+  color: var(--text-3) !important;
+  margin-top: 18px !important;
+}
+.legal-card {
+  margin-top: 24px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-2);
+}
+.legal-card dl { display: grid; gap: 16px; }
+.legal-card dl > div { display: flex; gap: 20px; align-items: baseline; }
+.legal-card dt {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  color: var(--text-3);
+  width: 72px;
+  flex-shrink: 0;
+}
+.legal-card dd { font-size: 15.5px; color: var(--text); }
+.legal-card a { color: var(--accent); transition: color 0.2s ease; }
+.legal-card a:hover { color: var(--accent-strong); }
+.legal-card a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.legal-date {
+  font-family: var(--mono);
+  font-size: 12px !important;
+  letter-spacing: 0.12em;
+  color: var(--text-3) !important;
+  margin-top: 28px !important;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 600px) {
+  .legal-item { margin-top: 48px; }
+  .legal-item h2 { flex-direction: column; gap: 10px; }
+  .legal-card { padding: 22px; }
+  .legal-card dl > div { flex-direction: column; gap: 6px; }
+  .legal-card dt { width: auto; }
+}
+.consent-link { margin-top: 12px; padding-left: 32px; font-size: 13px; }
+.consent-link a { color: var(--text-3); text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s ease; }
+.consent-link a:hover { color: var(--accent); }
+.consent-link a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
